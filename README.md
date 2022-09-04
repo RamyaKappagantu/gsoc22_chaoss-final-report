@@ -13,4 +13,16 @@ Augur is a Python library, REST server and Flask web application which is used t
 3. Understood SQL Alchemy better and the advantages of SQL Alchemy over SQL or standard database model.
 4. Setting up augur environment to run the visualizations.
 5. Understood pull_request_reports.py and contributors_reports.py to develop a workflow for generating new visualizations for augur workers.
-6. 
+6. Understood machine learning workers and it's dependencies required for the project: Discourse Analysis, Message Insights, Pull Request Analysis and Clustering worker.
+7. Started working on adding visualizations to discourse analysis worker and developed a python script using bokeh library to create a visualization which counts the pull requests and issues per discourse act.
+8. Got to learn about Sandiego Project which uses a web app to generate visualizations using Dash library.
+9. Understood the workflow of the Sandiego Project web app and also explored more about Dash library.
+10. Worked on setting up the environment for Sandiego Project web app by building the container.
+11. Started working on enhancing the previously developed visualizations using Dash library.
+
+### Coding Phase 2:
+1. Continued working on developing the visualizations for discourse analysis worker using Dash Library.
+2. Worked on enhancing the performance of the code by improving the underlying SQL query.
+3. Thought of 2 workflows to see which performs the best: 
+    a.  Computing the discourse counts within the python script.
+    b.  Computing the discourse counts within the PostgreSQL query and using it within the python script.
