@@ -9,7 +9,7 @@ Augur is a Python library, REST server and Flask web application which is used t
 
 ### Community Bonding and Coding Phase 1:
 1. Gone through the Augur Database Schemas to understand the augur workers dependencies.
-2. Gone through CHAOSS metrics and understood the working groups better.
+2. Gone through CHAOSS metrics and understood the working groups better. Understanding the difference between standard and non-standard metrics.
 3. Understood SQL Alchemy better and the advantages of SQL Alchemy over SQL or standard database model.
 4. Setting up augur environment to run the visualizations.
 5. Understood pull_request_reports.py and contributors_reports.py to develop a workflow for generating new visualizations for augur workers.
@@ -26,3 +26,15 @@ Augur is a Python library, REST server and Flask web application which is used t
 3. Thought of 2 workflows to see which performs the best: 
     a.  Computing the discourse counts within the python script.
     b.  Computing the discourse counts within the PostgreSQL query and using it within the python script.
+
+### Questions and Observations:
+1. Can data_collection_date in discourse_insights table be null? - No, a timestamp is maintained everytime data is collected.
+2. augur_data.issue_message_ref table also contains data about augur_data.pull_request_message_ref so when data is collected regarding both issues and pull requests for discourse analysis worker, we need to separate the data from augur_data.issue_message_ref that are not pull requests in order to avoid redundancy.
+3. While analysing augur_data.discourse_insights table where the messages are classified into various discourse acts, I got to observe that the discourse act for the same message is different across different dates in a year.
+4. The data collected in augur_data.discourse_insights is not uniform across time. For example, I got to see data collected across different years(2019 - 2022) whereas after few days, I got to see only data collected in 2022.
+
+### To-Do's:
+1. While working on adding visualizations to machine learning workers using Dash Library, I would like to understand more about 'Data' Input type in Dash callbacks to see if we can directly send a SQL query to 'Data' input type instead of providing the raw SQL query in the code.
+2. Add more visualizations to augur machine learning workers.
+3. Work on improving the performance of the machine learning workers.
+4. Continue contributing to CHAOSS.
