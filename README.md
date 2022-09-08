@@ -38,3 +38,7 @@ Augur is a Python library, REST server and Flask web application which is used t
 2. Add more visualizations to augur machine learning workers.
 3. Work on improving the performance of the machine learning workers.
 4. Continue contributing to CHAOSS.
+
+### Pull Requests:
+[Adding visualization to discourse analysis worker.](https://github.com/sandiego-rh/explorer/pull/150)
+
